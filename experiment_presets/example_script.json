@@ -1,0 +1,13 @@
+{
+    "experiment_subname": "script",
+    "world_file_path":"./data/worlds/example_world.json",
+    "map_file_path":"./data/maps/example_map.csv",
+    "loc_file_path":"./data/locations/example_locations.json",
+    "role_file_dir":"./data/roles/",
+    "role_agent_codes":["John-en","Sally-en"],
+    "intervention":"",
+    "script":"John and Sally are getting married in a beautiful garden. Suddenly, a storm breaks out, and the guests start to panic. John tries to calm everyone down, while Sally looks for shelter. The storm intensifies, and the couple must decide whether to continue the ceremony or postpone it.",
+    "source":"Example",
+    "language":"en"
+
+}
