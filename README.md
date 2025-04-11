@@ -6,8 +6,7 @@
 
 This is the official implementation of the paper "BOOKWORLD: From Novels to Interactive Agent Societies for Story Creation".
 
-![Preview.png](https://www.helloimg.com/i/2025/04/08/67f530c202c68.png)
-
+![Preview.png](<https://media-hosting.imagekit.io/aed3adc716b44f02/Preview.png?Expires=1838986564&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=hVKzeh01rBkZrMTu9pWeT6jCGspHZtnkbrwIF9Uq9JZbodFn5OmFXoBKN8CxRauJTtYXEn1nfnLUY7OyK54FE5H5sMNtgR7-lnTlNZJW~c35lJShz2mGDw-NOgo~FRXEEkQvo3CZa1SjEYdakbIbaUo41KBTiIJ5dvWSETDYKHGYTljUMtRlo1-bV2BxMjLaAVwLev8qsPoUtGQcgO6DTzfNwc15abXE7ZwVRVSFQMrX5rWH4VtlYOIIpxM~HUnv630khvmBki9Db6P2WTaimvx~nmb8pCvhdZZRr8BwCo16OlL9RDNoFJMDIr5O6-F21eqmvkI97BIbhIUhpphwaQ__>)
 
 ## Introduction
 
@@ -70,6 +69,9 @@ Locate the directory of the previous simulation within `/experiment_saves/`, and
 ### Convert SillyTavern Character Cards to Role Data
 1. Put your character cards in `/data/sillytavern_cards/`.
 2. Run the script. It will convert all the cards into the role data that BookWorld needs.
+```bash
+python convert_sillytavern_cards_to_data.py
+```
 3. Input role codes of all the characters participating in this simulation to `role_agent_codes` in the preset file.
 
 ## Directory Structure

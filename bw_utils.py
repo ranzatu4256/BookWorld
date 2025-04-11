@@ -339,16 +339,6 @@ def count_tokens_num(string, encoding_name = "cl100k_base"):
     num_tokens = len(encoding.encode(string))
     return num_tokens
 
-def get_first_directory(path):
-    try:
-        for item in os.listdir(path):
-            full_path = os.path.join(path, item)
-            if os.path.isdir(full_path):
-                return full_path
-        return None
-    except Exception as e:
-        print(f"Error: {e}")
-        return None
  
 def json_parser(output):
     output = output.replace("\n", "")
@@ -422,6 +412,17 @@ def get_child_paths(root_folder):
             paths.append(path)
     return paths
 
+def get_first_directory(path):
+    try:
+        for item in os.listdir(path):
+            full_path = os.path.join(path, item)
+            if os.path.isdir(full_path):
+                return full_path
+        return None
+    except Exception as e:
+        print(f"Error: {e}")
+        return None
+    
 def find_files_with_suffix(directory, suffix):
     matched_files = []
     for root, dirs, files in os.walk(directory):  # 遍历目录及其子目录
