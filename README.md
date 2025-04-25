@@ -102,10 +102,25 @@ python convert_sillytavern_cards_to_data.py
 Jiaqing Liang, Yanghua Xiao, Deqing Yang.
 
 ```bibtex
-to be updated
+@misc{ran2025bookworldnovelsinteractiveagent,
+      title={BookWorld: From Novels to Interactive Agent Societies for Creative Story Generation}, 
+      author={Yiting Ran and Xintao Wang and Tian Qiu and Jiaqing Liang and Yanghua Xiao and Deqing Yang},
+      year={2025},
+      eprint={2504.14538},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2504.14538}, 
+}
 ```
 
 
 ##  Acknowledgements
 
 - Fantasy Map: The background of map panel used in the frontend is from [Free Fantasy Maps](https://freefantasymaps.org/epic-world-cinematic-landscapes/), created by Fantasy Map Maker. This map is free for non-commercial use.
+
+## Contact
+
+BookWorld is a foundational framework that we aim to continuously optimize and enrich with custom modules. We welcome and greatly appreciate your suggestions and contributions!
+
+If you have any suggestions or would like to contribute, please contact us at: ytran23@m.fudan.edu.cn
+
