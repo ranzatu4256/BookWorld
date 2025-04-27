@@ -1,7 +1,7 @@
 # BookWorld: Interactive Multi-Agent Story Creation System
 
 
-[![Paper](https://img.shields.io/badge/Paper-PDF-red)](paper_link_placeholder)
+[![Paper](https://img.shields.io/badge/Paper-PDF-red)](https://arxiv.org/abs/2406.18921)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 This is the official implementation of the paper "BOOKWORLD: From Novels to Interactive Agent Societies for Story Creation".
