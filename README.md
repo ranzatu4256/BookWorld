@@ -1,8 +1,13 @@
 # BookWorld: Interactive Multi-Agent Story Creation System
 
+<div align="center">
 
-[![Paper](https://img.shields.io/badge/Paper-PDF-red)](https://arxiv.org/abs/2406.18921)
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+🖥️ [Project Page](https://bookworld2025.github.io/) | 📃 [Paper](https://arxiv.org/abs/2406.18921) 
+
+</div>
+
+
+
 
 This is the official implementation of the paper "BOOKWORLD: From Novels to Interactive Agent Societies for Story Creation".
 
@@ -112,6 +117,9 @@ Jiaqing Liang, Yanghua Xiao, Deqing Yang.
       url={https://arxiv.org/abs/2504.14538}, 
 }
 ```
+## License
+
+This project is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
 
 
 ##  Acknowledgements

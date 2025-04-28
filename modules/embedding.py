@@ -1,13 +1,24 @@
-from modelscope import AutoModel, AutoTokenizer
+from transformers import AutoModel, AutoTokenizer
+from transformers.utils import hub
 from functools import partial
 import torch
+import os
+
 
 class EmbeddingModel:
     def __init__(self, model_name, language='en'):
         self.model_name = model_name
         self.language = language
-        self.tokenizer = AutoTokenizer.from_pretrained(model_name)
-        self.model = AutoModel.from_pretrained(model_name)
+        cache_dir = hub.default_cache_path
+        model_provider = model_name.split("/")[0]
+        model_smallname = model_name.split("/")[1]
+        model_path = os.path.join(cache_dir, f"models--{model_provider}--{model_smallname}")
+        if os.path.exists(model_path):
+            self.tokenizer = AutoTokenizer.from_pretrained(model_path)
+            self.model = AutoModel.from_pretrained(model_path)
+        else:
+            self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+            self.model = AutoModel.from_pretrained(model_name)
 
     def __call__(self, input):
         inputs = self.tokenizer(input, return_tensors="pt", padding=True, truncation=True, max_length=256)

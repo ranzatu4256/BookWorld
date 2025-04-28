@@ -8,34 +8,6 @@ import re
 import random
 import base64
 
-API_CONFIGS = {
-    'openai': {
-        'label': 'OpenAI API Key',
-        'models': ['gpt-3.5-turbo', 'gpt-4', 'gpt-4-turbo'],
-        'envKey': 'OPENAI_API_KEY'
-    },
-    'anthropic': {
-        'label': 'Claude API Key',
-        'models': ['claude-3-opus', 'claude-3-sonnet', 'claude-2.1'],
-        'envKey': 'ANTHROPIC_API_KEY'
-    },
-    'deepseek': {
-        'label': 'DeepSeek API Key',
-        'models': ['deepseek-chat', 'deepseek-coder'],
-        'envKey': 'DEEPSEEK_API_KEY'
-    },
-    'google': {
-        'label': 'Google API Key',
-        'models': ['gemini-pro', 'gemini-pro-vision'],
-        'envKey': 'GOOGLE_API_KEY'
-    },
-    'qwen': {
-        'label': '通义千问 API Key',
-        'models': ['qwen-turbo', 'qwen-plus', 'qwen-max'],
-        'envKey': 'QWEN_API_KEY'
-    }
-}
-
 MODEL_NAME_DICT = {
     "gpt3":"openai/gpt-3.5-turbo",
     "gpt-4":"openai/gpt-4",
