@@ -16,7 +16,7 @@ class EmbeddingModel:
         model_provider = model_name.split("/")[0]
         model_smallname = model_name.split("/")[1]
         model_path = os.path.join(cache_dir, f"models--{model_provider}--{model_smallname}/snapshots/")
-        if get_child_folders(model_path):
+        if os.path.exists(model_path) and get_child_folders(model_path):
             try:
                 model_path = os.path.join(model_path,get_child_folders(model_path)[0])
                 self.tokenizer = AutoTokenizer.from_pretrained(model_path)
