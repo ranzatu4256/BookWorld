@@ -49,12 +49,9 @@ def get_models(model_name):
     elif model_name.startswith("claude"):
         from modules.llm.LangChainGPT import LangChainGPT
         return LangChainGPT(model="claude-3-5-sonnet-20241022")
-    elif model_name.startswith('qwen-'):
+    elif model_name.startswith('qwen'):
         from modules.llm.Qwen import Qwen
         return Qwen(model = model_name)
-    elif model_name.startswith('qwen2.5'):
-        from modules.llm.Qwen import Qwen_local
-        return Qwen_local(model = model_name)
     elif model_name.startswith('deepseek'):
         from modules.llm.DeepSeek import DeepSeek
         return DeepSeek()

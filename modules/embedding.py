@@ -1,6 +1,9 @@
+import sys
+sys.path.append("../")
 from transformers import AutoModel, AutoTokenizer
 from transformers.utils import hub
 from functools import partial
+from bw_utils import get_child_folders
 import torch
 import os
 
@@ -12,10 +15,16 @@ class EmbeddingModel:
         cache_dir = hub.default_cache_path
         model_provider = model_name.split("/")[0]
         model_smallname = model_name.split("/")[1]
-        model_path = os.path.join(cache_dir, f"models--{model_provider}--{model_smallname}")
-        if os.path.exists(model_path):
-            self.tokenizer = AutoTokenizer.from_pretrained(model_path)
-            self.model = AutoModel.from_pretrained(model_path)
+        model_path = os.path.join(cache_dir, f"models--{model_provider}--{model_smallname}/snapshots/")
+        if get_child_folders(model_path):
+            try:
+                model_path = os.path.join(model_path,get_child_folders(model_path)[0])
+                self.tokenizer = AutoTokenizer.from_pretrained(model_path)
+                self.model = AutoModel.from_pretrained(model_path)
+            except Exception as e:
+                print(e)
+                self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+                self.model = AutoModel.from_pretrained(model_name)
         else:
             self.tokenizer = AutoTokenizer.from_pretrained(model_name)
             self.model = AutoModel.from_pretrained(model_name)

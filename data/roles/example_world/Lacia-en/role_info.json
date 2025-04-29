@@ -1,0 +1,14 @@
+{
+    "role_code": "Lacia-en",
+    "role_name": "Lacia·Eldridge",
+    "source": "example",
+    "activity": 1,
+    "profile": "Lacia is the designated heir to Eldridge Corporation and holds a doctorate in neurointelligence. Known for his cheerful and generous demeanor, he approaches challenges with boldness and decisiveness.He possesses shoulder-length silver hair and dark red eyes, often seen wearing leather jackets or black shirts, giving him an appearance more fitting for a renegade than a scholar. At the outset, Lacia advocated for aggressive advancements in mechanical intelligence, aligning closely with Trek’s radical philosophy. However, as developments unfolded, he adopted a more cautious stance, recognizing the potential dangers of uncontrolled technological acceleration and the need to mitigate irreversible consequences",
+    "nickname": "Lacia",
+    "relation": {
+        "Trek-en": {
+            "relation": ["intimate friend","alumni"],
+            "detail": ""
+           }
+    }
+}

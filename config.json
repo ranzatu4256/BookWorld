@@ -1,7 +1,7 @@
 {
     "role_llm_name": "gemini-2",
     "world_llm_name": "gemini-2",
-    "preset_path":"./experiment_presets/experiment_icefire_bloody_wedding.json",
+    "preset_path":"./experiment_presets/experiment_alice.json",
     "if_save": 0,
     "scene_mode": 1,
     "rounds": 10,
