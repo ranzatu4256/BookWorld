@@ -67,7 +67,7 @@ Locate the directory of the previous simulation within `/experiment_saves/`, and
 
 ## Customization
 ### Construct Your Virtual World
-1. Create the roles, map, worldbuilding following the examples given in `/data/`. You can improve the simulation quality by providing more detailed information about the world and character dialogue lines. Additionally, you can place an image named `icon.(png/jpg)` inside the character's folder — this will be used as the avatar displayed in the interface.
+1. Create the roles, map, worldbuilding following the examples given in `/data/`. You can improve the simulation quality by providing background settings about the world in `world_details/` or put character dialogue lines in `role_lines.jsonl`. Additionally, you can place an image named `icon.(png/jpg)` inside the character's folder — this will be used as the avatar displayed in the interface.
 3. Enter the preset path to `preset_path` in `config.json`.
 
 ### Convert SillyTavern Character Cards to Role Data
