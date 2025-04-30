@@ -1,7 +1,8 @@
 {
     "role_llm_name": "gemini-2",
     "world_llm_name": "gemini-2",
-    "preset_path":"./experiment_presets/experiment_alice.json",
+    "embedding_model_name":"bert",
+    "preset_path":"./experiment_presets/example_free.json",
     "if_save": 0,
     "scene_mode": 1,
     "rounds": 10,

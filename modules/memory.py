@@ -17,7 +17,7 @@ def build_role_agent_memory(type = "ga",**kwargs):
         embedding_name = kwargs["embedding_name"]
         db_name = kwargs["db_name"]
         language = kwargs["language"] if "language" in kwargs else ""
-        embedding_model = HuggingFaceEmbeddings(model_name=get_embedding_model_path(embedding_name,language))
+        embedding_model = get_embedding_model(embedding_name,language)
         index = faiss.IndexFlatL2(len(embedding_model.embed_query("hello world")))
         vectorstore = FAISS(
             embedding_function=embedding_model,

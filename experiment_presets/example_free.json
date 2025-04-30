@@ -1,5 +1,5 @@
 {
-    "experiment_subname": "script",
+    "experiment_subname": "free",
     "world_file_path":"./data/worlds/example_world/general.json",
     "map_file_path":"./data/maps/example_map.csv",
     "loc_file_path":"./data/locations/example_locations.json",
@@ -7,7 +7,7 @@
     "role_agent_codes":["Lacia-en","Trek-en"],
     "intervention":"One day, an enigmatic signal from an unknown source reached Lacia and Trek...",
     "script":"",
-    "source":"Example",
+    "source":"example_world",
     "language":"en"
 
 }
