@@ -51,7 +51,7 @@ class WorldAgent:
     def init_from_file(self, map_file_path: str, location_file_path: str, default_distance: int = 1):
         if map_file_path and os.path.exists(map_file_path):
             valid_locations = load_json_file(location_file_path) if "locations" not in load_json_file(location_file_path) else load_json_file(location_file_path)["locations"]
-            with open(map_file_path, mode='r') as file:
+            with open(map_file_path, mode='r',encoding="utf-8") as file:
                 csv_reader = csv.reader(file)
                 locations = next(csv_reader)[1:]  
                 for row in csv_reader:

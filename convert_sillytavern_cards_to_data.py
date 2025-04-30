@@ -11,7 +11,7 @@ for name in names:
     path = os.path.join(card_dir, name)
     role_code = name.split('.')[0].replace(" ","_")
     if is_image(path):
-        with open(path, 'rb') as f:
+        with open(path, 'rb',encoding="utf-8") as f:
             image = Image.open(f)
             card_info = json.loads(decode_base64(image.text['chara']))
             language = lang_detect(card_info['data']['description'])
