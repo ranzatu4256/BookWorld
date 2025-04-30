@@ -9,13 +9,12 @@ WORKDIR $HOME/app
 
 COPY --chown=user . $HOME/app
 
-RUN pip3 install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir --upgrade -r requirements.txt
 
 RUN huggingface-cli download BAAI/bge-m3
-RUN huggingface-cli download BAAI/bge-large-zh
 
 ENV OPENAI_API_KEY=""
 
 EXPOSE 8000
 
-CMD ["python3", "server.py"]
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "7860"]

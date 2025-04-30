@@ -34,7 +34,8 @@ class ConnectionManager:
                 raise ValueError("Please set the preset_path in `config.json`.")
             self.bw = BookWorld(preset_path = preset_path,
                     world_llm_name = config["world_llm_name"],
-                    role_llm_name = config["world_llm_name"])
+                    role_llm_name = config["role_llm_name"],
+                    embedding_name = config["embedding_model_name"])
             self.bw.set_generator(rounds = config["rounds"], 
                         save_dir = config["save_dir"], 
                         if_save = config["if_save"],

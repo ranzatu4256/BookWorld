@@ -90,18 +90,6 @@ def build_db(data, db_name, db_type, embedding, save_type="persistent"):
         db.init_from_data(data,db_name)
     return db
 
-def get_embedding_model_path(embedding_name, language = "zh"):
-    model_name_dict = {
-        "bge-m3":"BAAI/bge-m3",
-        "bge": "BAAI/bge-large-",
-        "luotuo": "silk-road/luotuo-bert-medium",
-        "bert": "google-bert/bert-base-multilingual-cased",
-    }
-    model_path = model_name_dict[embedding_name]
-    if embedding_name == "bge":
-        model_path += language
-    return model_path
-
 def get_root_dir():
     current_file_path = os.path.abspath(__file__)
     root_dir = os.path.dirname(current_file_path)
