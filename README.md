@@ -2,7 +2,7 @@
 
 <div align="center">
 
-🖥️ [Project Page](https://bookworld2025.github.io/) | 📃 [Paper](https://arxiv.org/abs/2406.18921) 
+🖥️ [Project Page](https://bookworld2025.github.io/) | 📃 [Paper](https://arxiv.org/abs/2406.18921) | 🤗 [Demo](https://huggingface.co/spaces/alienet/BookWorld)
 
 </div>
 
