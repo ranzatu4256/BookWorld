@@ -16,4 +16,6 @@ RUN huggingface-cli download BAAI/bge-large-zh
 
 ENV OPENAI_API_KEY=""
 
+EXPOSE 8000
+
 CMD ["python3", "server.py"]
