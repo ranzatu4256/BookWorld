@@ -52,6 +52,10 @@ pip install -r requirements.txt
 ```bash
 python server.py
 ```
+or
+```bash
+uvicorn server:app --host 127.0.0.1 --port 8000  
+```
 
 ### Step 2. Access the web interface
 Open a browser and navigate to http://localhost:8000.

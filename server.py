@@ -106,7 +106,7 @@ class ConnectionManager:
     async def get_next_message(self):
         """从BookWorld获取下一条消息"""
         message = self.bw.generate_next_message()
-        if not is_image(message["icon"]):
+        if not os.path.exists(message["icon"]) or not is_image(message["icon"]):
             message["icon"] = default_icon_path
         status = self.bw.get_current_status()
         return message,status
@@ -116,7 +116,7 @@ manager = ConnectionManager()
 @app.get("/")
 async def get():
     html_file = Path("index.html")
-    return HTMLResponse(html_file.read_text())
+    return HTMLResponse(html_file.read_text(encoding="utf-8"))
 
 @app.get("/data/{full_path:path}")
 async def get_file(full_path: str):
