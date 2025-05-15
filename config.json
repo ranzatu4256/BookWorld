@@ -2,7 +2,7 @@
     "role_llm_name": "gemini-2",
     "world_llm_name": "gemini-2",
     "embedding_model_name":"bge-m3",
-    "preset_path":"./experiment_presets/experiment_icefire.json",
+    "preset_path":"./experiment_presets/example_free.json",
     "if_save": 1,
     "scene_mode": 1,
     "rounds": 10,
@@ -12,7 +12,7 @@
     "OPENAI_API_KEY":"",
     "GEMINI_API_KEY":"",
     "ANTHROPIC_API_KEY":"",
-    "OPENROUTER_API_KEY":"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",
+    "OPENROUTER_API_KEY":"",
     "DASHSCOPE_API_KEY":"",
     "DEEPSEEK_API_KEY":"",
     "ARK_API_KEY":""
