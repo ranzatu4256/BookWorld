@@ -990,6 +990,7 @@ class BookWorld():
         else:
             location_name,location_description = self.server.world_agent.find_location_name(location_code),self.server.world_agent.locations_info[location_code]["description"]
         status['location'] = {'name': location_name, 'description': location_description}
+        status['characters'] = self.get_characters_info()
         return status
     
     def handle_message_edit(self,record_id,new_text):

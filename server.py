@@ -14,7 +14,7 @@ app = FastAPI()
 default_icon_path = './frontend/assets/images/default-icon.jpg'
 config = load_json_file('config.json')
 for key in config:
-    if "API_KEY" in key:
+    if "API_KEY" in key and config[key]:
         os.environ[key] = config[key]
 
 static_file_abspath = os.path.abspath(os.path.join(os.path.dirname(__file__), 'frontend'))
@@ -25,8 +25,11 @@ class ConnectionManager:
         self.active_connections: dict[str, WebSocket] = {}  
         self.story_tasks: dict[str, asyncio.Task] = {}  
         if True:
-            if "preset_path" in config and config["preset_path"] and os.path.exists(config["preset_path"]):
-                preset_path = config["preset_path"]
+            if "preset_path" in config and config["preset_path"]:
+                if os.path.exists(config["preset_path"]):
+                    preset_path = config["preset_path"]
+                else:
+                    raise ValueError(f"The preset path {config['preset_path']} does not exist.")
             elif "genre" in config and config["genre"]:
                 genre = config["genre"]
                 preset_path = os.path.join(os.path.dirname(os.path.abspath(__file__)),f"./config/experiment_{genre}.json")
@@ -200,12 +203,6 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
                         'icon': default_icon_path,
                         'type': 'story'
                     }
-                })
-                
-            elif message['type'] == 'request_api_configs':
-                await websocket.send_json({
-                    'type': 'api_configs',
-                    'data': API_CONFIGS
                 })
                 
             elif message['type'] == 'api_settings':

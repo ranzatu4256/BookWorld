@@ -38,8 +38,6 @@ class OpenRouter(BaseLLM):
         self.initialize_message()
         self.user_message(text)
         response = self.get_response(temperature = temperature)
-        print("In",self.count_token(text))
-        print("Out", self.count_token(response))
         self.in_token += self.count_token(text)
         self.out_token += self.count_token(response)
         return response
