@@ -1,6 +1,6 @@
 {
-    "role_llm_name": "gemini-2",
-    "world_llm_name": "gemini-2",
+    "role_llm_name": "qwen3-30b-a3b",
+    "world_llm_name": "qwen3-30b-a3b",
     "embedding_model_name":"bge-m3",
     "preset_path":"./experiment_presets/example_free.json",
     "if_save": 1,
